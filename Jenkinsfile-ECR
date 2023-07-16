@@ -17,7 +17,7 @@ pipeline{
             steps{
               script{
                 
-               gitCheckout(branch:"main", url:"https://github.com/brenda-la/devops-java.git")
+               gitCheckout(branch:"main", url:"https://github.com/brenda-la/devops-test.git")
               
               }  
             }
