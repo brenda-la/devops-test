@@ -92,7 +92,7 @@ pipeline{
   stage('RUn docker Image '){
           when { expression {  params.action == 'create' } }
              steps{
-                sh 'docker run -p 80:80 javaapps '
+                sh 'docker run -p 8085:8085 javaapps '
              }
     }
        //   stage('Docker Image Cleanup : ECR '){
