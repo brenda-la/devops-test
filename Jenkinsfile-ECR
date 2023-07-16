@@ -42,16 +42,16 @@ pipeline{
               }  
             }
         }
-        //     stage('Static code analysis: Sonarqube'){
-       //  when { expression {  params.action == 'create' } }
-        //    steps{
-          //     script{
+             stage('Static code analysis: Sonarqube'){
+         when { expression {  params.action == 'create' } }
+            steps{
+               script{
                    
-              //     def SonarQubecredentialsId = 'sonar12'
-              //     statiCodeAnalysis(SonarQubecredentialsId)
-            //   }
-        //    }
-      //  }
+                   def SonarQubecredentialsId = 'sonar12'
+                   statiCodeAnalysis(SonarQubecredentialsId)
+               }
+            }
+        }
          
      stage('Maven Build : maven'){
          when { expression {  params.action == 'create' } }
